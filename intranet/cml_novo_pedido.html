@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Intranet | Alta Sports</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+    <!-- IonIcons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+
+    
+    <!-- DataTables -->
+    <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <style>
+        th { 
+            white-space: nowrap; 
+            padding-right: 17px !important;
+            padding-left: 17px !important;
+        }
+
+        td { white-space: nowrap; }
+        
+        div.dataTables_wrapper {            
+            width: 100%;
+            margin: 0 auto;
+        }
+    
+        div.container {
+            width: 80%;
+        }
+    </style>
+
+    <!-- Tooltip -->
+    <style>
+        .tooltip-inner {
+            max-width: 500px;
+            /* If max-width does not work, try using width instead */
+            width: 500px; 
+        }
+    </style>
+        
+    <!-- Select2 -->
+    <link rel="stylesheet" href="../../plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed sidebar-collapse">
+    
+    
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-primary navbar-dark">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto"><!-- Fullscreen button -->
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
+        
+                <!-- Profile Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <span class="dropdown-item dropdown-header">Perfil</span>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fa-solid fa-user-pen mr-2"></i>Editar perfil
+                        </a>
+                    </div>
+                </li>   
+                
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="sign-out" href="#" role="button">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                        <i class="fas fa-th-large"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index.html" class="brand-link">
+                <img src="icon.png" alt="AdminLTE Logo" class="brand-image elevation-3"
+                    style="opacity: .8">
+                <span class="brand-text font-weight-light"><strong>Alta Sports</strong> | Intranet</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">Kelvin Severino</a>
+                    </div>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent nav-compact text-sm" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                Dashboard
+                                <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                <a href="./index.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Dashboard v1</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="./index2.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Dashboard v2</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="./index3.html" class="nav-link active">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Dashboard v3</p>
+                                </a>
+                                </li>
+                            </ul>
+                            </li>
+                            <li class="nav-item">
+                            <a href="pages/widgets.html" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                Widgets
+                                <span class="right badge badge-danger">New</span>
+                                </p>
+                            </a>
+                            </li>
+                            <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>
+                                Layout Options
+                                <i class="fas fa-angle-left right"></i>
+                                <span class="badge badge-info right">6</span>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                <a href="pages/layout/top-nav.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Top Navigation</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Top Navigation + Sidebar</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/layout/boxed.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Boxed</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Fixed Sidebar</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/layout/fixed-sidebar-custom.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Fixed Sidebar <small>+ Custom Area</small></p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/layout/fixed-topnav.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Fixed Navbar</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/layout/fixed-footer.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Fixed Footer</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Collapsed Sidebar</p>
+                                </a>
+                                </li>
+                            </ul>
+                            </li>
+                            <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-chart-pie"></i>
+                                <p>
+                                Charts
+                                <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                <a href="pages/charts/chartjs.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>ChartJS</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/charts/flot.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Flot</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/charts/inline.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Inline</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/charts/uplot.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>uPlot</p>
+                                </a>
+                                </li>
+                            </ul>
+                            </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">Novo Pedido</h1>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <div class="card-body">
+                <h4>Custom Content Below</h4>
+        
+                <ul class="nav nav-tabs" id="custom-content-below-tab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="custom-content-below-home-tab" data-toggle="pill" href="#custom-content-below-home2" role="tab" aria-controls="custom-content-below-home" aria-selected="true">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="custom-content-below-profile-tab" data-toggle="pill" href="#custom-content-below-profile" role="tab" aria-controls="custom-content-below-profile" aria-selected="false">Profile</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="custom-content-below-messages-tab" data-toggle="pill" href="#custom-content-below-messages" role="tab" aria-controls="custom-content-below-messages" aria-selected="false">Messages</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="custom-content-below-settings-tab" data-toggle="pill" href="#custom-content-below-settings" role="tab" aria-controls="custom-content-below-settings" aria-selected="false">Settings</a>
+                  </li>
+                </ul>
+        
+                <div class="tab-content" id="custom-content-below-tabContent">
+                  <div class="tab-pane fade show active" id="custom-content-below-home2" role="tabpanel" aria-labelledby="custom-content-below-home-tab">
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada lacus ullamcorper dui molestie, sit amet congue quam finibus. Etiam ultricies nunc non magna feugiat commodo. Etiam odio magna, mollis auctor felis vitae, ullamcorper ornare ligula. Proin pellentesque tincidunt nisi, vitae ullamcorper felis aliquam id. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin id orci eu lectus blandit suscipit. Phasellus porta, ante et varius ornare, sem enim sollicitudin eros, at commodo leo est vitae lacus. Etiam ut porta sem. Proin porttitor porta nisl, id tempor risus rhoncus quis. In in quam a nibh cursus pulvinar non consequat neque. Mauris lacus elit, condimentum ac condimentum at, semper vitae lectus. Cras lacinia erat eget sapien porta consectetur.
+                  </div>
+                  <div class="tab-pane fade" id="custom-content-below-profile" role="tabpanel" aria-labelledby="custom-content-below-profile-tab">
+                     Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris pharetra purus ut ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas sollicitudin, nisi a luctus interdum, nisl ligula placerat mi, quis posuere purus ligula eu lectus. Donec nunc tellus, elementum sit amet ultricies at, posuere nec nunc. Nunc euismod pellentesque diam.
+                  </div>
+                  <div class="tab-pane fade" id="custom-content-below-messages" role="tabpanel" aria-labelledby="custom-content-below-messages-tab">
+                     Morbi turpis dolor, vulputate vitae felis non, tincidunt congue mauris. Phasellus volutpat augue id mi placerat mollis. Vivamus faucibus eu massa eget condimentum. Fusce nec hendrerit sem, ac tristique nulla. Integer vestibulum orci odio. Cras nec augue ipsum. Suspendisse ut velit condimentum, mattis urna a, malesuada nunc. Curabitur eleifend facilisis velit finibus tristique. Nam vulputate, eros non luctus efficitur, ipsum odio volutpat massa, sit amet sollicitudin est libero sed ipsum. Nulla lacinia, ex vitae gravida fermentum, lectus ipsum gravida arcu, id fermentum metus arcu vel metus. Curabitur eget sem eu risus tincidunt eleifend ac ornare magna.
+                  </div>
+                  <div class="tab-pane fade" id="custom-content-below-settings" role="tabpanel" aria-labelledby="custom-content-below-settings-tab">
+                     Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis tempus turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque tincidunt venenatis vulputate. Morbi euismod molestie tristique. Vestibulum consectetur dolor a vestibulum pharetra. Donec interdum placerat urna nec pharetra. Etiam eget dapibus orci, eget aliquet urna. Nunc at consequat diam. Nunc et felis ut nisl commodo dignissim. In hac habitasse platea dictumst. Praesent imperdiet accumsan ex sit amet facilisis.
+                  </div>
+                </div>
+              </div>
+
+            <!-- ***************************************
+                CONTEUDO PRINCIPAL 
+            *************************************** -->
+            <div class="content">
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-12">  
+                            
+                            <form class="form-horizontal" action="#" method="post">                          
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="form-group row">
+                                            <div class="col-md-3">
+                                                <label class="text-sm">Filial</label>
+                                                <select name="filial" class="form-control form-control-sm" style="width: 100%;">
+                                                    <option value="">...</option>
+                                                    <option value="1">001 - Star Racer</option>
+                                                    <option value="2">007 - Silva Mattos</option>                                                   
+                                                </select>                                             </div>
+                                            <div class="col-md-2">
+                                                <label class="text-sm">Tipo Pedido</label>                                                
+                                                <select name="tipo_pedido" class="form-control form-control-sm" style="width: 100%;">
+                                                    <option value="">...</option>
+                                                    <option value="1">Normal</option>
+                                                    <option value="2">Projeto Especial</option>                                                   
+                                                </select>                                            
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label class="text-sm">Data de Entrega</label>
+                                                <input type="date" class="form-control form-control-sm" name="data_entrega" placeholder="" value="">
+                                            </div>
+                                            <div class="col-md-5">
+                                                <label class="text-sm">Cliente <i style="color:orange;" class="fa-solid fa-arrow-up-right-from-square"></i></label>
+                                                <input type="text" class="form-control form-control-sm" name="cliente" placeholder="" value="" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-2">
+                                                <label class="text-sm">Vendedor</label>
+                                                <input type="text" class="form-control form-control-sm" name="vendedor" placeholder="" value="" disabled>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label class="text-sm">Representante</label>
+                                                <input type="text" class="form-control form-control-sm" name="representate" placeholder="" value="" disabled>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label class="text-sm">Transportadora</label>
+                                                <select name="transportadora" class="form-control form-control-sm" style="width: 100%;">
+                                                    <option value="">...</option>
+                                                    <option value="1">JR CANDIDO</option>
+                                                    <option value="2">CORREIOS</option>                                                   
+                                                </select>                                             </div>
+                                            <div class="col-md-2">
+                                                <label class="text-sm">Tipo Frete</label>
+                                                <select name="tipo_frete" class="form-control form-control-sm" style="width: 100%;">
+                                                    <option value="">...</option>
+                                                    <option value="1">STANDART</option>
+                                                    <option value="2">SEDEX</option>                                                   
+                                                </select>                                             </div>
+                                            <div class="col-md-3">
+                                                <label class="text-sm">Condição Pagamento</label>
+                                                <select name="cod_pgto" class="form-control form-control-sm" style="width: 100%;">
+                                                    <option value="">...</option>
+                                                    <option value="1">Antecipado</option>
+                                                    <option value="2">Parcelado</option>                                                   
+                                                </select>                                             </div>
+                                        </div>  
+                                        <div class="form-group row">                                            
+                                            <div class="col-md-2">
+                                                <label class="text-sm">Tabela</label>
+                                                <input type="text" class="form-control form-control-sm" name="tabela" placeholder="" value="" disabled>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label class="text-sm">Desconto (Ex.: 5,7%)</label>
+                                                <div class="input-group input-group-sm">
+                                                    <input type="text" class="form-control form-control-sm">
+                                                    <span class="input-group-append">
+                                                        <button type="button" class="btn btn-primary btn-flat">Aplicar</button>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-1">
+                                                <label class="text-sm">Aprovado</label>
+                                                <input type="checkbox" name="aprovado" data-bootstrap-switch>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <label class="text-sm">Orçamento</label>
+                                                <input type="checkbox" name="orcamento" checked data-bootstrap-switch>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="text-sm" for="obs">Obs</label>
+                                            <textarea class="form-control form-control-sm" name="obs" rows="4">Financeiro:&#13;&#10;Faturamento:&#13;&#10;Logística:
+                                            </textarea>
+                                        </div>
+
+                                    </div>     
+                                    <div class="card-body pt-0">
+                                        <div class="row">                                            
+                                            <div class="col-md-12">
+                                                <table id="list_products" class="table table-bordered table-striped text-sm table-sm">
+                                                    <thead>
+                                                        <div class="row">
+                                                            <div class="col-8"></div>
+                                                            <div class="col-4">  
+                                                                
+                                                                <div class="btn-group float-right">                                                      
+                                                                    <button type="button" class="btn btn-default btn-sm " data-toggle="modal" data-target="#modal-copyProduct">
+                                                                        Copiar Produtos <i class="fa-solid fa-copy"></i>
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#modal-addProduct">
+                                                                        Incluir Produto <i class="fa-solid fa-plus"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <tr>
+                                                            <th>Código</th>
+                                                            <th>Descrição</th>
+                                                            <th>Desconto</th>
+                                                            <th>Saldo</th>
+                                                            <th>Preço</th>
+                                                            <th>%IPI</th>
+                                                            <th>Total</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>                                                    
+                                                            <td>010101</td>
+                                                            <td>Bota Tech 7</td>
+                                                            <td>5,7</td>
+                                                            <td>2</td>
+                                                            <td>2.500,00</td>
+                                                            <td>13</td>
+                                                            <td>11.000,00</td>
+                                                            <td align="center"> 
+                                                                <div class="btn-group">
+                                                                    <button type="button" class="btn py-0" style="color:orange;" title="Editar">
+                                                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                                                    </button>  
+                                                                    <button type="button" class="btn py-0" style="color:rgb(186, 10, 192);" data-toggle="modal" data-target="#modal-topProducts" title="Dash Top Produtos">
+                                                                        <i class="fa-brands fa-product-hunt"></i>
+                                                                    </button>  
+                                                                </div>
+                                                            </td>
+                                                        </tr>                                            
+                                                    </tbody>
+                                                </table>                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="card-footer">
+                                        <div class="row">
+                                            <div class="col-sm-2 col-3">
+                                                <div class="description-block border-right">
+                                                    <span class="description-text">QUANTIDADE PEÇAS</span>
+                                                    <h5 class="description-header">2</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2 col-3">
+                                                <div class="description-block border-right">
+                                                    <span class="description-text">TOTAL PRODUTOS</span>
+                                                    <h5 class="description-header">R$1.000,00</h5>
+                                                </div>
+                                            </div>   
+                                            <div class="col-sm-2 col-3">
+                                                <div class="description-block border-right">
+                                                    <span class="description-text">DESCONTO</span>
+                                                    <h5 class="description-header">R$100,00</h5>
+                                                </div>
+                                            </div>    
+                                            <div class="col-sm-2 col-3">
+                                                <div class="description-block border-right">
+                                                    <span class="description-text">DESCONTO %</span>
+                                                    <h5 class="description-header">10%</h5>
+                                                </div>
+                                            </div>    
+                                            <div class="col-sm-2 col-3">
+                                                <div class="description-block border-right">
+                                                    <span class="description-text">VALOR FINAL</span>
+                                                    <h5 class="description-header">R$900,00</h5>
+                                                </div>
+                                            </div> 
+                                            <div class="col-sm-2 col-3">
+                                                <div class="description-block">                                                    
+                                                    <button type="submit" class="btn btn-success">Efetivar</button>
+                                                </div>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                </div> 
+                            </form>    
+                        </div>                        
+                    </div>
+
+                </div><!-- /.container-fluid -->
+            </div><!-- /.content -->
+            <!-- ***************************************
+                FIM CONTEUDO PRINCIPAL
+            *************************************** -->
+        </div><!-- /.content-wrapper -->
+
+        <!-- ADICIONAR PRODUTOS -->
+        <div class="modal fade" id="modal-addProduct">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Grade</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form class="form-horizontal" action="#" method="post">                          
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="form-group row mb-0">                                            
+                                                <label class="col-form-label">Produto:</label>
+                                                <div class="input-group col-md-10">
+                                                    <select name="filial" class="form-control form-control-sm select2bs4" style="width: 100%;">
+                                                        <option value="">...</option>
+                                                        <option value="1"></option>                                                 
+                                                    </select>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <button type="submit" class="btn btn-success mb-0" id="buscar">Buscar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <div class="flex-md-row mb-4 box-shadow h-md-250">
+                                    <div class="card-body d-flex flex-column align-items-start">
+                                        <h5 class="mb-0">                                            
+                                            <strong class="d-inline-block mb-0 text-dark">BOTA ALPINESTARS TECH 3</strong>
+                                        </h5>
+                                        <div class="mb-1 text-muted">Cod.: 2013018</div>
+                                        
+                                        <table id="list_productGrade" class="table table-bordered table-hover dataTable dtr-inline collapsed text-sm table-sm display" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>Cor</th>
+                                                    <th class="text-center teste">05</th>
+                                                    <th class="text-center">06</th>
+                                                    <th class="text-center">07</th>
+                                                    <th class="text-center">08</th>
+                                                    <th class="text-center">09</th>
+                                                    <th class="text-center">10</th>
+                                                    <th class="text-center">11</th>
+                                                    <th class="text-center">12</th>
+                                                    <th class="text-center">13</th>
+                                                    <th class="text-center">14</th>
+                                                    <th class="text-center">15</th>
+                                                    <th class="text-center">16</th>
+                                                    <th class="text-center">17</th>
+                                                    <th class="text-center">18</th>
+                                                    <th class="text-center">19</th>
+                                                    <th class="text-center">20</th>
+                                                    <th class="text-center">05</th>
+                                                    <th class="text-center">06</th>
+                                                    <th class="text-center">07</th>
+                                                    <th class="text-center">08</th>
+                                                    <th class="text-center">09</th>
+                                                    <th class="text-center">10</th>
+                                                    <th class="text-center">11</th>
+                                                    <th class="text-center">12</th>
+                                                    <th class="text-center">13</th>
+                                                    <th class="text-center">14</th>
+                                                    <th class="text-center">15</th>
+                                                    <th class="text-center">16</th>
+                                                    <th class="text-center">17</th>
+                                                    <th class="text-center">18</th>
+                                                    <th class="text-center">19</th>
+                                                    <th class="text-center">20</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>                                                
+                                                <tr>                 
+                                                    <td>RESERVADO</td>                                        
+                                                    <td align="center">
+                                                        <span style="color: #0000EE;" data-toggle="tooltip" data-placement="right" data-html="true" 
+                                                            title="
+                                                                Pedido:010101 - 1 Unid - Sacramento LTDA - Emissão: 22/10/2022<br>
+                                                                Pedido:050505 - 1 Unid - Bikers e Cia LTDA - Emissão: 25/10/2022<br>
+                                                            ">
+                                                            2
+                                                        </span>
+                                                    </td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>               
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>               
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>                                   
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>               
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>               
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>
+                                                </tr>
+                                                <tr>                                                           
+                                                    <td>ESTOQUE</td>                                                
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">3</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">5</td>              
+                                                    <td align="center">0</td>               
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>               
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>                                   
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>               
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>               
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>
+                                                </tr>
+                                                <tr style="background-color: #B0B0B0;">                                        
+                                                    <td><strong>011 - PRETO</strong></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                </tr>
+                                                                                              
+                                                <tr>                 
+                                                    <td>RESERVADO</td>                                        
+                                                    <td align="center">
+                                                        <span style="color: #0000EE;" data-toggle="tooltip" data-placement="right" data-html="true" 
+                                                            title="
+                                                                Pedido:010101 - 1 Unid - Sacramento LTDA - Emissão: 22/10/2022<br>
+                                                                Pedido:050505 - 1 Unid - Bikers e Cia LTDA - Emissão: 25/10/2022<br>
+                                                            ">
+                                                            2
+                                                        </span>
+                                                    </td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>               
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>               
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>                                   
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>               
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>               
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>
+                                                </tr>
+                                                <tr>                                                           
+                                                    <td>ESTOQUE</td>                                                
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">3</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">5</td>              
+                                                    <td align="center">0</td>               
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>               
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>                                   
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>               
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>               
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>
+                                                </tr>
+                                                <tr style="background-color: #B0B0B0;">                                        
+                                                    <td><strong>015 - CINZA SPECIAL EDITION</strong></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                </tr>                                                
+                                                                                              
+                                                <tr>                 
+                                                    <td>RESERVADO</td> 
+                                                    <td align="center">0</td>                
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>               
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                                       
+                                                    <td align="center">
+                                                        <span style="color: #0000EE;" data-toggle="tooltip" data-placement="right" data-html="true" 
+                                                            title="
+                                                                Pedido:010101 - 1 Unid - Sacramento LTDA - Emissão: 22/10/2022<br>
+                                                                Pedido:050505 - 1 Unid - Bikers e Cia LTDA - Emissão: 25/10/2022<br>
+                                                            ">
+                                                            2
+                                                        </span>
+                                                    </td>                 
+                                                    <td align="center">0</td>               
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>                                   
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>               
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>               
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>
+                                                </tr>
+                                                <tr>                                                           
+                                                    <td>ESTOQUE</td>                                                
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">3</td>                 
+                                                    <td align="center">3</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">8</td>              
+                                                    <td align="center">0</td>               
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">3</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>               
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>                                   
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>               
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>               
+                                                    <td align="center">0</td>                 
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>              
+                                                    <td align="center">0</td>
+                                                </tr>
+                                                <tr style="background-color: #B0B0B0;">                                        
+                                                    <td><strong>011 - VERMELHO AMARELO FLUO</strong></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                    <td align="center"><input type="text" class="form-control form-control-sm" name="tam_0" placeholder="" value=""></td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card-header p-0 pt-1 border-bottom-0">
+                                    <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">                                        
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="produtos-relacionados-tab" data-toggle="pill" href="#produtos-relacionados" role="tab" aria-controls="produtos-relacionados" aria-selected="true">Produtos Relacionados</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="descricao-tab" data-toggle="pill" href="#descricao" role="tab" aria-controls="descricao" aria-selected="false">Descrição</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="imagens-tab" data-toggle="pill" href="#imagens" role="tab" aria-controls="imagens" aria-selected="false">Imagens</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="card-body pb-0">
+                                    <div class="tab-content" id="custom-tabs-three-tabContent">                                        
+                                        <div class="tab-pane fade active show" id="produtos-relacionados" role="tabpanel" aria-labelledby="produtos-relacionados-tab">
+                                            <div class="row">
+
+                                                <div class="col-md-3">  
+                                                    <div class="flex-md-row box-shadow">
+                                                        <div class="card-body d-flex flex-column align-items-start py-0">
+                                                            <img class="card-img-right flex-auto d-none d-md-block" data-src="#" alt="Thumbnail" src="http://altasports.com.br/imagens/25SU906.jpg" data-holder-rendered="true" style="width: 170px; height: 170px;">
+                    
+                                                            <h6 class="mb-0">
+                                                                <a class="text-dark" href="#">SOLA TECH 3</a>
+                                                            </h6>
+                                                            <div class="text-muted">Cod.: 25SU906</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>                                            
+                                        </div>
+                                        <div class="tab-pane fade" id="descricao" role="tabpanel" aria-labelledby="descricao-tab">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada lacus ullamcorper dui molestie, sit amet congue quam finibus. Etiam ultricies nunc non magna feugiat commodo. Etiam odio magna, mollis auctor felis vitae, ullamcorper ornare ligula. Proin pellentesque tincidunt nisi, vitae ullamcorper felis aliquam id. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin id orci eu lectus blandit suscipit. Phasellus porta, ante et varius ornare, sem enim sollicitudin eros, at commodo leo est vitae lacus. Etiam ut porta sem. Proin porttitor porta nisl, id tempor risus rhoncus quis. In in quam a nibh cursus pulvinar non consequat neque. Mauris lacus elit, condimentum ac condimentum at, semper vitae lectus. Cras lacinia erat eget sapien porta consectetur.
+                                        </div>
+                                        <div class="tab-pane fade" id="imagens" role="tabpanel" aria-labelledby="imagens-tab">
+                                            <div class="col-12">                                                
+                                                <div class="card-body">
+                                                    <div class="form-group row"> 
+                                                        <div class="col-sm-2">
+                                                            <img src="http://altasports.com.br/imagens/2013118_010.jpg" class="img-fluid mb-2" alt="black sample"/>
+                                                        </div>
+
+                                                        <div class="col-sm-2">
+                                                            <img src="http://altasports.com.br/imagens/2013018_032.jpg" class="img-fluid mb-2" alt="black sample"/>
+                                                        </div>
+
+                                                        <div class="col-sm-2">
+                                                            <img src="http://altasports.com.br/imagens/2013018_1055.jpg" class="img-fluid mb-2" alt="black sample"/>
+                                                        </div>
+
+                                                        <div class="col-sm-2">
+                                                            <img src="http://altasports.com.br/imagens/2013018_1238.jpg" class="img-fluid mb-2" alt="black sample"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- COPIAR PRODUTOS -->
+        <div class="modal fade" id="modal-copyProduct">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Copiar Produtos de Pedido</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form class="form-horizontal" action="#" method="post">                          
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="form-group row mb-0">                                            
+                                                <label class="col-form-label">Data Inicial:</label>
+                                                <div class="input-group col-md-2">
+                                                    <input type="date" class="form-control" name="data_inicial" id="" value="" required>
+                                                </div>
+            
+                                                <label class="col-form-label">Data Final:</label>
+                                                <div class="input-group col-md-2">
+                                                    <input type="date" class="form-control" name="data_final" id="" value="" required>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <button type="submit" class="btn btn-success mb-2" id="gerar">Buscar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="card-body">
+                                <table id="list_copyProducts" class="table table-bordered table-striped text-sm table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>Pedido</th>
+                                            <th>Cliente</th>
+                                            <th>Data Emissão</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>010101</td>                                               
+                                            <td>Sacramento LTDA</td>                         
+                                            <td>25/10/2022</td> 
+                                            <td align="center">
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-block btn-sm py-0">
+                                                        <i class="fa-solid fa-plus" style="color:green;"></i>
+                                                    </button> 
+                                                </div>
+                                            </td>
+                                        </tr>                                            
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DASH PRODUTOS COMPRADOS DA MESMA CATEGORIA -->
+        <div class="modal fade" id="modal-topProducts">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Produtos similares comprados por Clientes</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">   
+                        <div class="row">
+                            <div class="card-body">
+                                <table id="list_topProducts" class="table table-bordered table-striped text-sm table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>Cod</th>
+                                            <th>Produto</th>
+                                            <th>Ranking</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>010101</td>                                               
+                                            <td>Bota Tech 3</td>                         
+                                            <td>1</td> 
+                                        </tr> 
+                                        <tr>
+                                            <td>010101</td>                                               
+                                            <td>Bota Tech 10</td>                         
+                                            <td>2</td> 
+                                        </tr> 
+                                        <tr style="background-color: #3ef05c;">
+                                            <td>010101</td>                                               
+                                            <td>Bota Tech 7</td>                         
+                                            <td>3</td> 
+                                        </tr> 
+                                        <tr>
+                                            <td>010101</td>                                               
+                                            <td>Bota Stella Tech 3</td>                         
+                                            <td>4</td> 
+                                        </tr>                                          
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+
+        <!-- Main Footer -->
+        <footer class="main-footer text-sm">
+            <strong>Copyright &copy; 2022 <a href="https://intranet.altasports.com.br">Alta Sports</a>.</strong>
+            Todos os direitos reservados.
+            <div class="float-right d-none d-sm-inline-block">        
+                <b>Versão</b> 3.0
+            </div>
+        </footer>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- REQUIRED SCRIPTS -->
+
+    <!-- jQuery -->
+    <script src="../../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE -->
+    <script src="../../dist/js/adminlte.js"></script>
+      
+    <!-- Bootstrap Switch -->
+    <script src="../../plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+
+    <!-- Page specific script -->
+    <script>
+        $(function () { 
+            $("input[data-bootstrap-switch]").each(function(){
+                $(this).bootstrapSwitch('state', $(this).prop('checked'));
+            })
+        });
+    </script>
+
+    <!-- DataTables  & Plugins -->
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    
+    <!-- Page specific script -->
+    <script>
+        $(function () {
+            $("#list_products").DataTable({
+                "paging": false,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": false,
+                "autoWidth": false,
+                "responsive": true,
+            });
+
+            $("#list_copyProducts").DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": true,
+                "ordering": false,
+                "info": false,
+                "autoWidth": false,
+                "responsive": true,
+            });
+
+            //Carrega scripts apos exibir a Modal
+            $('#modal-addProduct').on('shown.bs.modal', function () {                    
+                //Inicializa a tabla e destroi em seguida para evitar erro de reinicializacao
+                table = $('#list_productGrade').DataTable();
+                table.destroy();
+
+                $("#list_productGrade").DataTable({ 
+                      
+                    "paging": false,
+                    "lengthChange": false,
+                    "searching": false,   
+                    "ordering": false,            
+                    "info": false,                     
+                    "autoWidth": false,
+                    "responsive": false,
+                    
+                    "scrollY":        "300px",
+                    "scrollX":        true,
+                    "scrollCollapse": true,
+                });
+            });
+            
+            //Carrega scripts apos exibir a Modal
+            $('#modal-topProducts').on('shown.bs.modal', function () { 
+                //Inicializa a tabla e destroi em seguida para evitar erro de reinicializacao
+                table = $('#list_topProducts').DataTable();
+                table.destroy();
+
+                $("#list_topProducts").DataTable({ 
+                    "paging": false,
+                    "lengthChange": false,
+                    "searching": false,   
+                    "ordering": false,            
+                    "info": false,                     
+                    "autoWidth": false,
+                    "responsive": false,
+                });
+            });
+        });
+    </script>
+
+    <!-- Tooltip -->
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
+    <!-- Select2 -->
+    <script src="../../plugins/select2/js/select2.full.min.js"></script>
+
+    <script>
+        $(function () {
+            //Initialize Select2 Elements
+            $('.select2').select2()
+            
+            //Initialize Select2 Elements
+            $('.select2bs4').select2({
+            theme: 'bootstrap4'
+            })
+        })
+    </script>
+
+</body>
+
+</html>

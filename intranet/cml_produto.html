@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Intranet | Alta Sports</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+    <!-- IonIcons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+
+    
+    <!-- DataTables -->
+    <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed sidebar-collapse">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-primary navbar-dark">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto"><!-- Fullscreen button -->
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
+        
+                <!-- Profile Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <span class="dropdown-item dropdown-header">Perfil</span>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fa-solid fa-user-pen mr-2"></i>Editar perfil
+                        </a>
+                    </div>
+                </li>   
+                
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="sign-out" href="#" role="button">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                        <i class="fas fa-th-large"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index.html" class="brand-link">
+                <img src="icon.png" alt="AdminLTE Logo" class="brand-image elevation-3"
+                    style="opacity: .8">
+                <span class="brand-text font-weight-light"><strong>Alta Sports</strong> | Intranet</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">Kelvin Severino</a>
+                    </div>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent nav-compact text-sm" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                Dashboard
+                                <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                <a href="./index.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Dashboard v1</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="./index2.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Dashboard v2</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="./index3.html" class="nav-link active">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Dashboard v3</p>
+                                </a>
+                                </li>
+                            </ul>
+                            </li>
+                            <li class="nav-item">
+                            <a href="pages/widgets.html" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                Widgets
+                                <span class="right badge badge-danger">New</span>
+                                </p>
+                            </a>
+                            </li>
+                            <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>
+                                Layout Options
+                                <i class="fas fa-angle-left right"></i>
+                                <span class="badge badge-info right">6</span>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                <a href="pages/layout/top-nav.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Top Navigation</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Top Navigation + Sidebar</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/layout/boxed.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Boxed</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Fixed Sidebar</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/layout/fixed-sidebar-custom.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Fixed Sidebar <small>+ Custom Area</small></p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/layout/fixed-topnav.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Fixed Navbar</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/layout/fixed-footer.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Fixed Footer</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Collapsed Sidebar</p>
+                                </a>
+                                </li>
+                            </ul>
+                            </li>
+                            <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-chart-pie"></i>
+                                <p>
+                                Charts
+                                <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                <a href="pages/charts/chartjs.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>ChartJS</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/charts/flot.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Flot</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/charts/inline.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Inline</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/charts/uplot.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>uPlot</p>
+                                </a>
+                                </li>
+                            </ul>
+                            </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">Vendas</h1>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- ***************************************
+                CONTEUDO PRINCIPAL 
+            *************************************** -->
+            <div class="content">
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-md-12">                            
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="card-header p-0 pt-1">
+                                        <ul class="nav nav-tabs" id="custom-tabs-two-tab" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="custom-tabs-two-home-tab" data-toggle="pill" href="#custom-tabs-two-home" role="tab" aria-controls="custom-tabs-two-home" aria-selected="true">Home</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="custom-tabs-two-profile-tab" data-toggle="pill" href="#custom-tabs-two-profile" role="tab" aria-controls="custom-tabs-two-profile" aria-selected="false">Profile</a>
+                                            </li>
+                                        </ul>
+                                    </div>                                  
+                                        <div class="card">
+                                            <div class="tab-content" id="custom-tabs-two-tabContent">
+                                                <div class="tab-pane fade show active" id="custom-tabs-two-home" role="tabpanel" aria-labelledby="custom-tabs-two-home-tab">                                                
+                                                    <div class="card-body pb-0 pt-4" style="padding-top: 0px">
+                                                        <div class="tab-content">
+                                                            <div class="active tab-pane" id="view">
+                                                                <form class="form-horizontal ajax_off" action="#" method="post" enctype="multipart/form-data">                                
+                                                                    <div class="form-group row">
+                                                                        <label class="col-form-label">Produto:</label>
+                                                                        <div class="input-group mb-3 col-lg-6">
+                                                                            <div class="input-group-prepend"></div>
+                                                                            <input type="text" class="form-control col-lg-3" placeholder="SKU"
+                                                                                aria-label="SKU" aria-describedby="basic-addon2" />
+                                                                            <select class="custom-select" id="inputGroupSelect01" aria-label="Produto">
+                                                                                <option selected="">Selecione o Produto...</option>
+                                                                                <option value="1">Produto 1</option>
+                                                                                <option value="2">Produto 2</option>
+                                                                                <option value="3">Produto 3</option>
+                                                                            </select>
+                                                                        </div>
+                                
+                                                                        <label class="col-form-label">Filial:</label>
+                                                                        <div class="input-group col-md-3">
+                                                                            <select class="custom-select" name="filial" id="inputGroup" required="">
+                                                                                <option value="">Selecione</option>
+                                                                                <option value="1">001 - STAR RACER BRASIL LTDA</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="col-auto">
+                                                                            <button type="submit" class="btn btn-success mb-2">
+                                                                                Buscar
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <table class="table table-hover table-striped" style="background-color: white">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Cor</th>
+                                                                <th>2XS</th>
+                                                                <th>XS</th>
+                                                                <th>S</th>
+                                                                <th>M</th>
+                                                                <th>L</th>
+                                                                <th>XL</th>
+                                                                <th>2XL</th>
+                                                                <th>3XL</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr style="height: 25px">
+                                                                <td class="font-weight-bold">012 PRETO BRANCO</td>
+                                                                <td>76</td>
+                                                                <td>33</td>
+                                                                <td>53</td>
+                                                                <td>51</td>
+                                                                <td>23</td>
+                                                                <td>22</td>
+                                                                <td>45</td>
+                                                                <td>132</td>
+                                                            </tr>
+                                                            <tr style="height: 24px">
+                                                                <td colspan="12" style="padding-bottom: 0px; padding-top: 0px">
+                                                                    <p style="margin-bottom: 3px">Pedidos de Venda:</p>
+                                                                    <p style="margin-bottom: 3px">Pedidos de Compra:</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="font-weight-bold">010 PRETO</td>
+                                                                <td>76</td>
+                                                                <td>33</td>
+                                                                <td>53</td>
+                                                                <td>51</td>
+                                                                <td>23</td>
+                                                                <td>22</td>
+                                                                <td>45</td>
+                                                                <td>132</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="12" style="padding-bottom: 0px; padding-top: 0px">
+                                                                    <p style="margin-bottom: 3px">Pedidos de Venda:</p>
+                                                                    <p style="margin-bottom: 3px">Pedidos de Compra:</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="font-weight-bold">016 PRETO LARANJA</td>
+                                                                <td>76</td>
+                                                                <td>33</td>
+                                                                <td>53</td>
+                                                                <td>51</td>
+                                                                <td>23</td>
+                                                                <td>22</td>
+                                                                <td>45</td>
+                                                                <td>132</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="12" style="padding-bottom: 0px; padding-top: 0px">
+                                                                    <p style="margin-bottom: 3px">Pedidos de Venda:</p>
+                                                                    <p style="margin-bottom: 3px">Pedidos de Compra:</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="font-weight-bold">015 PRETO ROXO</td>
+                                                                <td>76</td>
+                                                                <td>33</td>
+                                                                <td>53</td>
+                                                                <td>51</td>
+                                                                <td>23</td>
+                                                                <td>22</td>
+                                                                <td>45</td>
+                                                                <td>132</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="12" style="padding-bottom: 0px; padding-top: 0px">
+                                                                    <p style="margin-bottom: 3px">Pedidos de Venda:</p>
+                                                                    <p style="margin-bottom: 3px">Pedidos de Compra:</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="font-weight-bold">241 AZUL MARINHO</td>
+                                                                <td>76</td>
+                                                                <td>33</td>
+                                                                <td>53</td>
+                                                                <td>51</td>
+                                                                <td>23</td>
+                                                                <td>22</td>
+                                                                <td>45</td>
+                                                                <td>132</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="12" style="padding-bottom: 0px; padding-top: 0px">
+                                                                    <p style="margin-bottom: 3px">Pedidos de Venda:</p>
+                                                                    <p style="margin-bottom: 3px">Pedidos de Compra:</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="font-weight-bold">244 AZUL VERMELHO FLUO</td>
+                                                                <td>76</td>
+                                                                <td>33</td>
+                                                                <td>53</td>
+                                                                <td>51</td>
+                                                                <td>23</td>
+                                                                <td>22</td>
+                                                                <td>45</td>
+                                                                <td>132</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="12" style="padding-bottom: 0px; padding-top: 0px">
+                                                                    <p style="margin-bottom: 3px">Pedidos de Venda:</p>
+                                                                    <p style="margin-bottom: 3px">Pedidos de Compra:</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="font-weight-bold">212 AZUL ROYAL</td>
+                                                                <td>76</td>
+                                                                <td>33</td>
+                                                                <td>53</td>
+                                                                <td>51</td>
+                                                                <td>23</td>
+                                                                <td>22</td>
+                                                                <td>45</td>
+                                                                <td>132</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="12" style="padding-bottom: 0px; padding-top: 0px">
+                                                                    <p style="margin-bottom: 3px">Pedidos de Venda:</p>
+                                                                    <p style="margin-bottom: 3px">Pedidos de Compra:</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="font-weight-bold">315 LARANJA FLUO CINZA</td>
+                                                                <td>76</td>
+                                                                <td>33</td>
+                                                                <td>53</td>
+                                                                <td>51</td>
+                                                                <td>23</td>
+                                                                <td>22</td>
+                                                                <td>45</td>
+                                                                <td>132</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="12" style="padding-bottom: 0px; padding-top: 0px">
+                                                                    <p style="margin-bottom: 3px">Pedidos de Venda:</p>
+                                                                    <p style="margin-bottom: 3px">Pedidos de Compra:</p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                
+                                                <div class="tab-pane fade" id="custom-tabs-two-profile" role="tabpanel" aria-labelledby="custom-tabs-two-profile-tab">
+                                                    <section class="content-header">
+                                                        <div class="container-fluid">
+                                                        <div class="row mb-2">
+                                                        <div class="col-sm-6">
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                        
+                                                        
+                                                        </div>
+                                                        </div>
+                                                        </div>
+                                                        </section>
+                                                        
+                                                        <section class="content">
+                                                        
+                                                        <div class="card card-solid">
+                                                        <div class="card-body">
+                                                        <div class="row">
+                                                        <div class="col-12 col-sm-6">
+                                                        <h3 class="d-inline-block d-sm-none">LOWA Men’s Renegade GTX Mid Hiking Boots Review</h3>
+                                                        <div class="col-12">
+                                                        <img src="https://www.fc-moto.de/WebRoot/FCMotoDB/Shops/10207048/5DC2/9C0F/D9E4/7A68/8443/AC1E/140A/E666/Large-2223320-183-fr_honda-smx-6-v2-boot.jpg" class="product-image" alt="Product Image">
+                                                        </div>
+                                                        <div class="col-12 product-image-thumbs">
+                                                        <div class="product-image-thumb active"><img src="https://www.fc-moto.de/WebRoot/FCMotoDB/Shops/10207048/5DC2/9C0F/D9E4/7A68/8443/AC1E/140A/E666/Large-2223320-183-fr_honda-smx-6-v2-boot.jpg" alt="Product Image"></div>
+                                                        <div class="product-image-thumb"><img src="https://www.fc-moto.de/WebRoot/FCMotoDB/Shops/10207048/5DC2/9C0F/D9E4/7A68/8443/AC1E/140A/E666/Large-2223320-183-fr_honda-smx-6-v2-boot.jpg" alt="Product Image"></div>
+                                                        <div class="product-image-thumb"><img src="https://www.fc-moto.de/WebRoot/FCMotoDB/Shops/10207048/5DC2/9C0F/D9E4/7A68/8443/AC1E/140A/E666/Large-2223320-183-fr_honda-smx-6-v2-boot.jpg" alt="Product Image"></div>
+                                                        <div class="product-image-thumb"><img src="https://www.fc-moto.de/WebRoot/FCMotoDB/Shops/10207048/5DC2/9C0F/D9E4/7A68/8443/AC1E/140A/E666/Large-2223320-183-fr_honda-smx-6-v2-boot.jpg" alt="Product Image"></div>
+                                                        <div class="product-image-thumb"><img src="https://www.fc-moto.de/WebRoot/FCMotoDB/Shops/10207048/5DC2/9C0F/D9E4/7A68/8443/AC1E/140A/E666/Large-2223320-183-fr_honda-smx-6-v2-boot.jpg" alt="Product Image"></div>
+                                                        </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6">
+                                                        <h3 class="my-3">Bota Alpinestars Tech 3</h3><p class="font-weight-light" style="
+                                                            margin-bottom: 0px;
+                                                            width: 40px;
+                                                            height: 20px;
+                                                            position:relative; left:280px; bottom:44px;
+                                                        ">L0123</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec mi sed nunc vestibulum efficitur pretium non metus. Pellentesque faucibus posuere enim eu laoreet. Aliquam sit amet risus purus. In tincidunt ipsum ac pharetra accumsan. Proin aliquam velit urna, a feugiat massa vehicula sit amet. Maecenas et enim massa. Aliquam eleifend sapien eget accumsan iaculis. Praesent tincidunt fermentum velit. Praesent consectetur nisi luctus feugiat blandit. Proin in libero accumsan, maximus quam dictum, sodales purus. Suspendisse vitae aliquam magna, et gravida mi. Nam aliquam massa augue, quis posuere velit aliquam ut. Nulla facilisi.</p>
+                                                        <hr>
+                                                        
+                                                        
+                                                        <h4 style="
+                                                        margin-bottom: 40px;
+                                                        "> Classificação </h4>
+                                                        <div class="container">
+                                                          <div class="row">
+                                                            <div class="col-lg-4">
+                                                              <p class="font-weight-bold" style="width: 300px;margin-bottom: 0px;">Coleção</p><p>Vivamus vitae nibh in eros cursus elementum.</p>
+                                                            </div>
+                                                            <div class="col-lg-4">
+                                                              <p style="
+                                                            margin-bottom: 0px;
+                                                        " class="font-weight-bold">Sub-Coleção</p>
+                                                            <p>Vivamus vitae nibh in eros cursus elementum.</p>
+                                                            </div>
+                                                            <div class="col-lg-4">
+                                                              <p class="font-weight-bold" style="
+                                                              margin-bottom: 0px;
+                                                          ">Divisão</p>
+                                                              <p>Vivamus vitae nibh in eros cursus elementum.</p>
+                                                            </div>
+                                                            <div class="col-lg-4"><p class="font-weight-bold" style="
+                                                              margin-bottom: 0px;
+                                                          ">Grupo</p>
+                                                              <p>Vivamus vitae nibh in eros cursus elementum.</p></div>
+                                                            <div class="col-lg-4"><p class="font-weight-bold" style="
+                                                              margin-bottom: 0px;
+                                                          ">Tipo</p>
+                                                              <p>Vivamus vitae nibh in eros cursus elementum.</p></div>
+                                                            <div class="col-lg-4"><p class="font-weight-bold" style="
+                                                              margin-bottom: 0px;
+                                                          ">Categoria</p>
+                                                              <p style="
+                                                              margin-bottom: 0px;
+                                                          ">Vivamus vitae nibh in eros cursus elementum.</p></div>
+                                                            <div class="col-lg-6"><p class="font-weight-bold" style="
+                                                              margin-bottom: 0px;
+                                                          ">Departamento</p>
+                                                              <p style=" ">Vivamus vitae nibh in eros cursus elementum.</p></div>
+                                                          <div class="col-lg-6" style=" 
+                                                            margin-bottom: 0px;
+                                                            "> <p class="font-weight-bold" style="margin-bottom: 0px">Marca</p> 
+                                                            <p>Vivamus vitae nibh in eros cursus elementum.</p></div>
+                                                        </div>  
+                                                        </div>
+                                                        </div>
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        </div>
+                                                        </div>
+                                                        <div class="row mt-4" style="padding-left: 20px; ">
+                                                        <nav class="w-100">
+                                                        <div class="nav nav-tabs" id="product-tab" role="tablist">
+                                                        <a class="nav-item nav-link active" id="product-desc-tab" data-toggle="tab" href="file:///C:/Users/ti3/Desktop/adminlte/pages/examples/blank.html#product-desc" role="tab" aria-controls="product-desc" aria-selected="true">Produtos Recomendados</a>
+                                                        
+                                                        
+                                                        </div>
+                                                        </nav>
+                                                        <div class="tab-content p-3" id="nav-tabContent">
+                                                          <div class="card" style="width: 18rem;">
+                                                            <img class="card-img-top" src="https://paulinhomotos.fbitsstatic.net/img/p/bota-alpinestars-smx-s-77606/269140.jpg?w=565&amp;h=565&amp;v=no-change&amp;qs=ignore" alt="Bota SMX S">
+                                                            <div class="card-body">
+                                                              <p class="card-text font-weight-bold">Bota Alpinestars SMX S</p>
+                                                              <p>Suspendisse vitae aliquam magna, et gravida mi. Nam aliquam massa augue, quis posuere velit aliquam ut. Nulla facilisi.</p>
+                                                            </div>
+                                                          </div>
+                                                        <div class="tab-pane fade show active" id="product-desc" role="tabpanel" aria-labelledby="product-desc-tab"></div>
+                                                        <div class="tab-pane fade" id="product-comments" role="tabpanel" aria-labelledby="product-comments-tab"> Vivamus rhoncus nisl sed venenatis luctus. Sed condimentum risus ut tortor feugiat laoreet. Suspendisse potenti. Donec et finibus sem, ut commodo lectus. Cras eget neque dignissim, placerat orci interdum, venenatis odio. Nulla turpis elit, consequat eu eros ac, consectetur fringilla urna. Duis gravida ex pulvinar mauris ornare, eget porttitor enim vulputate. Mauris hendrerit, massa nec aliquam cursus, ex elit euismod lorem, vehicula rhoncus nisl dui sit amet eros. Nulla turpis lorem, dignissim a sapien eget, ultrices venenatis dolor. Curabitur vel turpis at magna elementum hendrerit vel id dui. Curabitur a ex ullamcorper, ornare velit vel, tincidunt ipsum. </div>
+                                                        <div class="tab-pane fade" id="product-rating" role="tabpanel" aria-labelledby="product-rating-tab"> Cras ut ipsum ornare, aliquam ipsum non, posuere elit. In hac habitasse platea dictumst. Aenean elementum leo augue, id fermentum risus efficitur vel. Nulla iaculis malesuada scelerisque. Praesent vel ipsum felis. Ut molestie, purus aliquam placerat sollicitudin, mi ligula euismod neque, non bibendum nibh neque et erat. Etiam dignissim aliquam ligula, aliquet feugiat nibh rhoncus ut. Aliquam efficitur lacinia lacinia. Morbi ac molestie lectus, vitae hendrerit nisl. Nullam metus odio, malesuada in vehicula at, consectetur nec justo. Quisque suscipit odio velit, at accumsan urna vestibulum a. Proin dictum, urna ut varius consectetur, sapien justo porta lectus, at mollis nisi orci et nulla. Donec pellentesque tortor vel nisl commodo ullamcorper. Donec varius massa at semper posuere. Integer finibus orci vitae vehicula placerat. </div>
+                                                        </div>
+                                                        
+                                                        <div class="tab-content p-3" id="nav-tabContent">
+                                                          <div class="card" style="width: 18rem;">
+                                                            <img class="card-img-top" src="https://dmh0jxq9p49fk.cloudfront.net/Custom/Content/Products/65/42/6542_bota-alpinestars-tech-7-2012014_m234_637879565215898488.jpg" alt="Bota SMX S">
+                                                            <div class="card-body">
+                                                              <p class="card-text font-weight-bold">Bota Alpinestars SMX S</p>
+                                                              <p>Suspendisse vitae aliquam magna, et gravida mi. Nam aliquam massa augue, quis posuere velit aliquam ut. Nulla facilisi.</p>
+                                                            </div>
+                                                          </div>
+                                                        <div class="tab-pane fade show active" id="product-desc" role="tabpanel" aria-labelledby="product-desc-tab"></div>
+                                                        <div class="tab-pane fade" id="product-comments" role="tabpanel" aria-labelledby="product-comments-tab"> Vivamus rhoncus nisl sed venenatis luctus. Sed condimentum risus ut tortor feugiat laoreet. Suspendisse potenti. Donec et finibus sem, ut commodo lectus. Cras eget neque dignissim, placerat orci interdum, venenatis odio. Nulla turpis elit, consequat eu eros ac, consectetur fringilla urna. Duis gravida ex pulvinar mauris ornare, eget porttitor enim vulputate. Mauris hendrerit, massa nec aliquam cursus, ex elit euismod lorem, vehicula rhoncus nisl dui sit amet eros. Nulla turpis lorem, dignissim a sapien eget, ultrices venenatis dolor. Curabitur vel turpis at magna elementum hendrerit vel id dui. Curabitur a ex ullamcorper, ornare velit vel, tincidunt ipsum. </div>
+                                                        <div class="tab-pane fade" id="product-rating" role="tabpanel" aria-labelledby="product-rating-tab"> Cras ut ipsum ornare, aliquam ipsum non, posuere elit. In hac habitasse platea dictumst. Aenean elementum leo augue, id fermentum risus efficitur vel. Nulla iaculis malesuada scelerisque. Praesent vel ipsum felis. Ut molestie, purus aliquam placerat sollicitudin, mi ligula euismod neque, non bibendum nibh neque et erat. Etiam dignissim aliquam ligula, aliquet feugiat nibh rhoncus ut. Aliquam efficitur lacinia lacinia. Morbi ac molestie lectus, vitae hendrerit nisl. Nullam metus odio, malesuada in vehicula at, consectetur nec justo. Quisque suscipit odio velit, at accumsan urna vestibulum a. Proin dictum, urna ut varius consectetur, sapien justo porta lectus, at mollis nisi orci et nulla. Donec pellentesque tortor vel nisl commodo ullamcorper. Donec varius massa at semper posuere. Integer finibus orci vitae vehicula placerat. </div>
+                                                        </div>
+                                                        
+                                                        <div class="tab-content p-3" id="nav-tabContent">
+                                                          <div class="card" style="width: 18rem;">
+                                                            <img class="card-img-top" src="https://zelao.vteximg.com.br/arquivos/ids/161880-1000-1000/21083_0515-1.jpg?v=637042630771830000" alt="Bota SMX S">
+                                                            <div class="card-body">
+                                                              <p class="card-text font-weight-bold">Bota Alpinestars SMX S</p>
+                                                              <p>Suspendisse vitae aliquam magna, et gravida mi. Nam aliquam massa augue, quis posuere velit aliquam ut. Nulla facilisi.</p>
+                                                            </div>
+                                                          </div>
+                                                        <div class="tab-pane fade show active" id="product-desc" role="tabpanel" aria-labelledby="product-desc-tab"></div>
+                                                        <div class="tab-pane fade" id="product-comments" role="tabpanel" aria-labelledby="product-comments-tab"> Vivamus rhoncus nisl sed venenatis luctus. Sed condimentum risus ut tortor feugiat laoreet. Suspendisse potenti. Donec et finibus sem, ut commodo lectus. Cras eget neque dignissim, placerat orci interdum, venenatis odio. Nulla turpis elit, consequat eu eros ac, consectetur fringilla urna. Duis gravida ex pulvinar mauris ornare, eget porttitor enim vulputate. Mauris hendrerit, massa nec aliquam cursus, ex elit euismod lorem, vehicula rhoncus nisl dui sit amet eros. Nulla turpis lorem, dignissim a sapien eget, ultrices venenatis dolor. Curabitur vel turpis at magna elementum hendrerit vel id dui. Curabitur a ex ullamcorper, ornare velit vel, tincidunt ipsum. </div>
+                                                        <div class="tab-pane fade" id="product-rating" role="tabpanel" aria-labelledby="product-rating-tab"> Cras ut ipsum ornare, aliquam ipsum non, posuere elit. In hac habitasse platea dictumst. Aenean elementum leo augue, id fermentum risus efficitur vel. Nulla iaculis malesuada scelerisque. Praesent vel ipsum felis. Ut molestie, purus aliquam placerat sollicitudin, mi ligula euismod neque, non bibendum nibh neque et erat. Etiam dignissim aliquam ligula, aliquet feugiat nibh rhoncus ut. Aliquam efficitur lacinia lacinia. Morbi ac molestie lectus, vitae hendrerit nisl. Nullam metus odio, malesuada in vehicula at, consectetur nec justo. Quisque suscipit odio velit, at accumsan urna vestibulum a. Proin dictum, urna ut varius consectetur, sapien justo porta lectus, at mollis nisi orci et nulla. Donec pellentesque tortor vel nisl commodo ullamcorper. Donec varius massa at semper posuere. Integer finibus orci vitae vehicula placerat. </div>
+                                                        </div>
+                                                        
+                                                        <div class="tab-content p-3" id="nav-tabContent">
+                                                          <div class="card" style="width: 18rem;">
+                                                            <img class="card-img-top" src="https://paulinhomotos.fbitsstatic.net/img/p/bota-alpinestars-smx-s-77606/269140.jpg?w=565&amp;h=565&amp;v=no-change&amp;qs=ignore" alt="Bota SMX S">
+                                                            <div class="card-body">
+                                                              <p class="card-text font-weight-bold">Bota Alpinestars SMX S</p>
+                                                              <p>Suspendisse vitae aliquam magna, et gravida mi. Nam aliquam massa augue, quis posuere velit aliquam ut. Nulla facilisi.</p>
+                                                            </div>
+                                                          </div>
+                                                        <div class="tab-pane fade show active" id="product-desc" role="tabpanel" aria-labelledby="product-desc-tab"></div>
+                                                        <div class="tab-pane fade" id="product-comments" role="tabpanel" aria-labelledby="product-comments-tab"> Vivamus rhoncus nisl sed venenatis luctus. Sed condimentum risus ut tortor feugiat laoreet. Suspendisse potenti. Donec et finibus sem, ut commodo lectus. Cras eget neque dignissim, placerat orci interdum, venenatis odio. Nulla turpis elit, consequat eu eros ac, consectetur fringilla urna. Duis gravida ex pulvinar mauris ornare, eget porttitor enim vulputate. Mauris hendrerit, massa nec aliquam cursus, ex elit euismod lorem, vehicula rhoncus nisl dui sit amet eros. Nulla turpis lorem, dignissim a sapien eget, ultrices venenatis dolor. Curabitur vel turpis at magna elementum hendrerit vel id dui. Curabitur a ex ullamcorper, ornare velit vel, tincidunt ipsum. </div>
+                                                        <div class="tab-pane fade" id="product-rating" role="tabpanel" aria-labelledby="product-rating-tab"> Cras ut ipsum ornare, aliquam ipsum non, posuere elit. In hac habitasse platea dictumst. Aenean elementum leo augue, id fermentum risus efficitur vel. Nulla iaculis malesuada scelerisque. Praesent vel ipsum felis. Ut molestie, purus aliquam placerat sollicitudin, mi ligula euismod neque, non bibendum nibh neque et erat. Etiam dignissim aliquam ligula, aliquet feugiat nibh rhoncus ut. Aliquam efficitur lacinia lacinia. Morbi ac molestie lectus, vitae hendrerit nisl. Nullam metus odio, malesuada in vehicula at, consectetur nec justo. Quisque suscipit odio velit, at accumsan urna vestibulum a. Proin dictum, urna ut varius consectetur, sapien justo porta lectus, at mollis nisi orci et nulla. Donec pellentesque tortor vel nisl commodo ullamcorper. Donec varius massa at semper posuere. Integer finibus orci vitae vehicula placerat. </div>
+                                                        </div>
+                                                        </div>
+                                                        </div>
+                                                        
+                                                        </section>
+                                            </div>
+                                        </div>
+                                    <!-- /.card -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- /.container-fluid -->
+            </div><!-- /.content -->
+            <!-- ***************************************
+                FIM CONTEUDO PRINCIPAL
+            *************************************** -->
+        </div><!-- /.content-wrapper -->
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+
+        <!-- Main Footer -->
+        <footer class="main-footer text-sm">
+            <strong>Copyright &copy; 2022 <a href="https://intranet.altasports.com.br">Alta Sports</a>.</strong>
+            Todos os direitos reservados.
+            <div class="float-right d-none d-sm-inline-block">        
+                <b>Versão</b> 3.0
+            </div>
+        </footer>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- REQUIRED SCRIPTS -->
+    <!-- jQuery -->
+    <script src="../../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE -->
+    <script src="../../dist/js/adminlte.js"></script>
+
+    <!-- DataTables  & Plugins -->
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    
+    <!-- Page specific script -->
+    <script>
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Intranet | Alta Sports</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+    <!-- IonIcons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+
+    <!-- Echarts -->
+    <script src="../../plugins/echarts/echarts.js"></script>
+    <script src="../../plugins/echarts/shine.js"></script>
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed sidebar-collapse">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-primary navbar-dark">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto"><!-- Fullscreen button -->
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
+        
+                <!-- Profile Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <span class="dropdown-item dropdown-header">Perfil</span>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fa-solid fa-user-pen mr-2"></i>Editar perfil
+                        </a>
+                    </div>
+                </li>   
+                
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="sign-out" href="#" role="button">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                        <i class="fas fa-th-large"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index.html" class="brand-link">
+                <img src="icon.png" alt="AdminLTE Logo" class="brand-image elevation-3"
+                    style="opacity: .8">
+                <span class="brand-text font-weight-light"><strong>Alta Sports</strong> | Intranet</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">Kelvin Severino</a>
+                    </div>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent nav-compact text-sm" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                Dashboard
+                                <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                <a href="./index.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Dashboard v1</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="./index2.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Dashboard v2</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="./index3.html" class="nav-link active">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Dashboard v3</p>
+                                </a>
+                                </li>
+                            </ul>
+                            </li>
+                            <li class="nav-item">
+                            <a href="pages/widgets.html" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                Widgets
+                                <span class="right badge badge-danger">New</span>
+                                </p>
+                            </a>
+                            </li>
+                            <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>
+                                Layout Options
+                                <i class="fas fa-angle-left right"></i>
+                                <span class="badge badge-info right">6</span>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                <a href="pages/layout/top-nav.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Top Navigation</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Top Navigation + Sidebar</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/layout/boxed.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Boxed</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Fixed Sidebar</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/layout/fixed-sidebar-custom.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Fixed Sidebar <small>+ Custom Area</small></p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/layout/fixed-topnav.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Fixed Navbar</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/layout/fixed-footer.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Fixed Footer</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Collapsed Sidebar</p>
+                                </a>
+                                </li>
+                            </ul>
+                            </li>
+                            <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-chart-pie"></i>
+                                <p>
+                                Charts
+                                <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                <a href="pages/charts/chartjs.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>ChartJS</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/charts/flot.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Flot</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/charts/inline.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Inline</p>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="pages/charts/uplot.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>uPlot</p>
+                                </a>
+                                </li>
+                            </ul>
+                            </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">Dashboard Cliente</h1>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- ***************************************
+                CONTEUDO PRINCIPAL 
+            *************************************** -->
+            <div class="content">
+                <div class="container-fluid">
+
+                    <div class="row">                        
+                        <div class="col-md-12">
+                            <div class="card card-primary card-outline">                                
+                                <div class="card-header">
+                                    <h3 class="card-title">Dados do Cliente</h3>
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="form-group row">                                        
+                                        <div class="col-md-2">
+                                            <label class="text-sm">Código</label>
+                                            <input type="text" class="form-control form-control-sm" name="cliente" placeholder="" value="" disabled>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label class="text-sm">Tabela</label>
+                                            <input type="text" class="form-control form-control-sm" name="tabela" placeholder="" value="" disabled>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="text-sm">Status</label>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" name="" id="" checked disabled> Ativado </label>
+                                                <label><input type="checkbox" name="" id="" disabled> Inativado </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">    
+                                        <div class="col-md-2">
+                                            <label class="text-sm">CNPJ</label>
+                                            <input type="text" class="form-control form-control-sm" name="cnpj" placeholder="" value="" disabled>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="text-sm">Razão Social</label>
+                                            <input type="text" class="form-control form-control-sm" name="razao_social" placeholder="" value="" disabled>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="text-sm">Fantasia</label>
+                                            <input type="text" class="form-control form-control-sm" name="fantasia" placeholder="" value="" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">                                        
+                                        <div class="col-md-1">
+                                            <label class="text-sm">CEP</label>
+                                            <input type="text" class="form-control form-control-sm" name="cep" placeholder="" value="" disabled>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label class="text-sm">Cidade</label>
+                                            <input type="text" class="form-control form-control-sm" name="cidade" placeholder="" value="" disabled>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <label class="text-sm">UF</label>
+                                            <input type="text" class="form-control form-control-sm" name="uf" placeholder="" value="" disabled>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label class="text-sm">Endereço</label>
+                                            <input type="text" class="form-control form-control-sm" name="endereco" placeholder="" value="" disabled>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <label class="text-sm">Número</label>
+                                            <input type="text" class="form-control form-control-sm" name="endereco_num" placeholder="" value="" disabled>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label class="text-sm">Complemento</label>
+                                            <input type="text" class="form-control form-control-sm" name="endereco_num" placeholder="" value="" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-md-2">
+                                            <label class="text-sm">E-mail</label>
+                                            <input type="text" class="form-control form-control-sm" name="email" placeholder="" value="" disabled>
+                                        </div>    
+                                        <div class="col-md-2">
+                                            <label class="text-sm">E-mail NFE</label>
+                                            <input type="text" class="form-control form-control-sm" name="email_nfe" placeholder="" value="" disabled>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label class="text-sm">Fone 1</label>
+                                            <input type="text" class="form-control form-control-sm" name="fone1" placeholder="" value="" disabled>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label class="text-sm">Fone 2</label>
+                                            <input type="text" class="form-control form-control-sm" name="fone2" placeholder="" value="" disabled>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="text-sm">Site</label>
+                                            <input type="text" class="form-control form-control-sm" name="site" placeholder="" value="" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-footer">
+                                    <div class="row">
+                                        <div class="col-sm-3 col-4">
+                                            <div class="description-block border-right">
+                                                <span>Ultima Compra</span>
+                                                <h5 class="description-header">22/09/2022 - R$1.346,57</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 col-4">
+                                            <div class="description-block border-right">
+                                                <span>Maior Compra</span>
+                                                <h5 class="description-header">R$15.000,00</h5>
+                                            </div>
+                                        </div>   
+                                        <div class="col-sm-3 col-4">
+                                            <div class="description-block border-right">
+                                                <span>Representatividade na Região</span>
+                                                <h5 class="description-header">0,02%</h5>
+                                            </div>
+                                        </div>    
+                                        <div class="col-sm-3 col-4">
+                                            <div class="description-block">
+                                                <span>Limite de Crédito</span>
+                                                <h5 class="description-header">R$150.000,00</h5>
+                                            </div>
+                                        </div>   
+                                    </div>                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">                        
+                        <div class="col-md-12">
+                            <div class="card card-secondary card-outline">                                
+                                <div class="card-header pb-0 pt-4">
+                                    <form class="form-horizontal" action="#" method="post">                                
+                                        <div class="form-group row">                                            
+                                            <label class="col-form-label">Data Inicial:</label>
+                                            <div class="input-group col-md-2">
+                                                <input type="date" class="form-control" name="data_inicial" id="" value="" required>
+                                            </div>
+        
+                                            <label class="col-form-label">Data Final:</label>
+                                            <div class="input-group col-md-2">
+                                                <input type="date" class="form-control" name="data_final" id="" value="" required>
+                                            </div>
+                                            <div class="col-auto">
+                                                <button type="submit" class="btn btn-secondary mb-2" id="gerar">Visualizar</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="row"> 
+                                        <div class="col-md-12">  
+                                            <div id="main" style="height:500px;"></div>                                     
+                                        </div>
+                                    </div>
+
+                                    <hr style="border-color: black; margin: 30px 0px 30px 0px;">
+
+                                    <div class="row"> 
+                                        <div class="col-md-12">  
+                                            <div id="mainPie" style="height:500px;"></div>                                     
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">                        
+                        <div class="col-md-7">
+                            <div class="card card-info card-outline">                                
+                                <div class="card-header">
+                                    <h3 class="card-title">Contatos</h3>
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="col-md-12">   
+                                        <table id="list_contacts" class="table table-hover text-sm table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nome</th>
+                                                    <th>Telefone</th>
+                                                    <th>E-mail</th>
+                                                    <th>Departamento</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Júlio Silva</td>                                            
+                                                    <td>(41) 99999-9999</td>                                
+                                                    <td>julio@sacramento</td>                             
+                                                    <td>Financeiro</td>      
+                                                </tr>    
+                                                <tr>
+                                                    <td>Júlio Silva</td>                                            
+                                                    <td>(41) 99999-9999</td>                                
+                                                    <td>julio@sacramento</td>                             
+                                                    <td>Financeiro</td>      
+                                                </tr> 
+                                                <tr>
+                                                    <td>Júlio Silva</td>                                            
+                                                    <td>(41) 99999-9999</td>                                
+                                                    <td>julio@sacramento</td>                             
+                                                    <td>Financeiro</td>      
+                                                </tr> 
+                                                <tr>
+                                                    <td>Júlio Silva</td>                                            
+                                                    <td>(41) 99999-9999</td>                                
+                                                    <td>julio@sacramento</td>                             
+                                                    <td>Financeiro</td>      
+                                                </tr>                           
+                                            </tbody>
+                                        </table>                              
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-info card-outline ">                                
+                                <div class="card-header">
+                                    <h3 class="card-title">Histórico de Contato</h3>
+                                </div>
+                                        
+                                <div class="direct-chat direct-chat-info direct-chat-messages">
+                                    <div class="direct-chat-msg">
+                                        <div class="direct-chat-infos clearfix">
+                                        <span class="direct-chat-name float-left">
+                                            Ana Carolina
+                                        </span>
+                                        <span class="direct-chat-timestamp float-right">23 Jan 8:00 am</span>
+                                        </div>
+                                        <img class="direct-chat-img" src="../../dist/img/user2-160x160.jpg" alt="message user image">
+                                        <div class="direct-chat-text">
+                                            Entrar em contato para oferecer produtos da Linha 22
+                                        </div>
+                                    </div>
+
+                                    <!-- Message to the right -->
+                                    <div class="direct-chat-msg right">
+                                        <div class="direct-chat-infos clearfix">
+                                        <span class="direct-chat-name float-right">
+                                            <span class="badge badge-primary">Pedido 010101 / Orçamento</span>
+                                            Ana Carolina Bavuso
+                                        </span>
+                                        <span class="direct-chat-timestamp float-left">23 Jan 1:05 pm</span>
+                                        </div>
+                                        <img class="direct-chat-img" src="../../dist/img/user2-160x160.jpg" alt="message user image">
+                                        <div class="direct-chat-text">
+                                            Cliente solicitou alteração no pedido, remover 2 botas!
+                                        </div>
+                                    </div>
+
+                                    <!-- Message to the right -->
+                                    <div class="direct-chat-msg right">
+                                        <div class="direct-chat-infos clearfix">
+                                        <span class="direct-chat-name float-right">
+                                            <span class="badge badge-primary">Pedido 010101 / Aprovado</span>
+                                            Ana Carolina Bavuso
+                                        </span>
+                                        <span class="direct-chat-timestamp float-left">23 Jan 3:05 pm</span>
+                                        </div>
+                                        <img class="direct-chat-img" src="../../dist/img/user2-160x160.jpg" alt="message user image">
+                                        <div class="direct-chat-text">
+                                            Cliente aprovou pedido!
+                                        </div>
+                                    </div>
+
+                                    <!-- Message to the right -->
+                                    <div class="direct-chat-msg right">
+                                        <div class="direct-chat-infos clearfix">
+                                        <span class="direct-chat-name float-right">
+                                            <span class="badge badge-primary">Pedido 010101 / Ag. Conferência</span>
+                                            Ana Carolina Bavuso
+                                        </span>
+                                        <span class="direct-chat-timestamp float-left">23 Jan 6:05 pm</span>
+                                        </div>
+                                        <img class="direct-chat-img" src="../../dist/img/user2-160x160.jpg" alt="message user image">
+                                        <div class="direct-chat-text">
+                                            Cliente pediu para mudar transportadora para Transporte Aéreo!
+                                        </div>
+                                    </div>
+                                </div>                                             
+
+                                <div class="card-footer">
+                                    <form action="#" method="post">
+                                    <div class="input-group">
+                                        <input type="text" name="message" placeholder="Escreva uma mensagem..." class="form-control">
+                                        <span class="input-group-append">
+                                        <button type="button" class="btn btn-primary">Enviar</button>
+                                        </span>
+                                    </div>
+                                    </form>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="card card-danger card-outline">                                
+                                <div class="card-header">
+                                    <h3 class="card-title">Pendência Financeira</h3>
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="col-md-12">   
+                                        <table id="list_financialPending" class="table table-hover text-sm table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nº DOC</th>
+                                                    <th>Data Vencimento</th>
+                                                    <th>Valor</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>010101</td>                                            
+                                                    <td>31/10/2022</td>                                
+                                                    <td>R$ 1.500,00</td>       
+                                                </tr>  
+                                                <tr>
+                                                    <td>010101</td>                                            
+                                                    <td>31/10/2022</td>                                
+                                                    <td>R$ 1.500,00</td>       
+                                                </tr>  
+                                                <tr>
+                                                    <td>010101</td>                                            
+                                                    <td>31/10/2022</td>                                
+                                                    <td>R$ 1.500,00</td>       
+                                                </tr>  
+                                                <tr>
+                                                    <td>010101</td>                                            
+                                                    <td>31/10/2022</td>                                
+                                                    <td>R$ 1.500,00</td>       
+                                                </tr>    
+                                            </tbody>
+                                        </table>                                
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-warning card-outline">                                
+                                <div class="card-header">
+                                    <h3 class="card-title">Garantia</h3>
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="col-md-12"> 
+                                        <table id="list_warranty" class="table table-hover text-sm table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nº Processo</th>
+                                                    <th>Data Início</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>010101</td>                                            
+                                                    <td>31/10/2022</td>                                
+                                                    <td>Ag. Análise</td>       
+                                                </tr>
+                                                <tr>
+                                                    <td>010101</td>                                            
+                                                    <td>31/10/2022</td>                                
+                                                    <td>Ag. Análise</td>       
+                                                </tr>
+                                                <tr>
+                                                    <td>010101</td>                                            
+                                                    <td>31/10/2022</td>                                
+                                                    <td>Ag. Análise</td>       
+                                                </tr>
+                                                <tr>
+                                                    <td>010101</td>                                            
+                                                    <td>31/10/2022</td>                                
+                                                    <td>Ag. Análise</td>       
+                                                </tr>
+                                                <tr>
+                                                    <td>010101</td>                                            
+                                                    <td>31/10/2022</td>                                
+                                                    <td>Ag. Análise</td>       
+                                                </tr>
+                                            </tbody>
+                                        </table>                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- /.container-fluid -->
+            </div><!-- /.content -->
+            <!-- ***************************************
+                FIM CONTEUDO PRINCIPAL
+            *************************************** -->
+        </div><!-- /.content-wrapper -->
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+
+        <!-- Main Footer -->
+        <footer class="main-footer text-sm">
+            <strong>Copyright &copy; 2022 <a href="https://intranet.altasports.com.br">Alta Sports</a>.</strong>
+            Todos os direitos reservados.
+            <div class="float-right d-none d-sm-inline-block">        
+                <b>Versão</b> 3.0
+            </div>
+        </footer>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- REQUIRED SCRIPTS -->
+
+    <!-- jQuery -->
+    <script src="../../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE -->
+    <script src="../../dist/js/adminlte.js"></script>
+
+    <script type="text/javascript">
+        var chartDom = document.getElementById('main');
+        var myChart = echarts.init(chartDom, 'shine');
+        var option;
+
+        var dataMap = {};
+        function dataFormatter(obj) {
+        // prettier-ignore
+        var pList = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
+        var temp;
+        for (var year = 2021; year <= 2022; year++) {
+            var max = 0;
+            var sum = 0;
+            temp = obj[year];
+            for (var i = 0, l = temp.length; i < l; i++) {
+            max = Math.max(max, temp[i]);
+            sum += temp[i];
+            obj[year][i] = {
+                name: pList[i],
+                value: temp[i]
+            };
+            }
+            obj[year + 'max'] = Math.floor(max / 100) * 100;
+            obj[year + 'sum'] = sum;
+        }
+        return obj;
+        }
+        // prettier-ignore
+        dataMap.dataMarcaAlpine = dataFormatter({
+            //max : 60000,
+            2022: [5007.21, 2578.03, 6921.29, 2855.23, 2388.38, 6002.54, 2662.08, 4057.4, 6694.23, 12442.87, 9705.02, 3923.11],
+            2021: [40315, 2150.76, 6018.28, 2324.8, 1940.94, 5458.22, 2348.54, 3637.2, 5741.03, 10606.85, 8003.67, 3519.72],
+        });
+        // prettier-ignore
+        dataMap.dataMarcaAsw = dataFormatter({
+            //max : 4000,
+            2022: [84.11, 89.91, 1064.05, 215.19, 420.1, 615.8, 488.23, 504.8, 81.02, 1162.45, 717.85, 749.4],
+            2021: [82.44, 84.21, 956.84, 197.8, 374.69, 590.2, 446.17, 474.2, 79.68, 1110.44, 685.2, 783.66]
+        });
+        // prettier-ignore
+        dataMap.dataMarcaBell = dataFormatter({
+            //max : 26600,
+            2022: [1487.15, 1337.31, 3417.56, 1463.38, 967.49, 2898.89, 1098.37, 2084.7, 3209.02, 6787.11, 5096.38, 1535.29],
+            2021: [1249.99, 1069.08, 2911.69, 1134.31, 754.78, 2609.85, 943.49, 1843.6, 2622.45, 5604.49, 4090.48, 1337.04]
+        });
+        // prettier-ignore
+        dataMap.dataMarcaLeatt = dataFormatter({
+            //max : 25000,
+            2022: [3435.95, 1150.81, 2439.68, 1176.65, 1000.79, 2487.85, 1075.48, 1467.9, 3404.19, 4493.31, 3890.79, 1638.42],
+            2021: [2982.57, 997.47, 2149.75, 992.69, 811.47, 2258.17, 958.88, 1319.4, 3038.9, 3891.92, 3227.99, 1399.02]
+        });
+        option = {
+        baseOption: {
+            timeline: {
+            axisType: 'category',
+            // realtime: false,
+            // loop: false,
+            autoPlay: true,
+            // currentIndex: 2,
+            playInterval: 3000,
+            data: [
+                '2021-12-31',
+                '2022-12-31',
+            ],
+            label: {
+                formatter: function (s) {
+                    return new Date(s).getFullYear();
+                }
+            }
+            },
+            title: {
+            subtext: 'Vendas por Marca'
+            },
+            tooltip: {},
+            legend: {
+            left: 'right',
+            data: ['Alpinestars', 'ASW', 'Bell', 'Leatt'],
+            },
+            calculable: true,
+            grid: {
+            top: 80,
+            bottom: 100,
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                type: 'shadow',
+                label: {
+                    show: true,
+                    formatter: function (params) {
+                    return params.value.replace('\n', '');
+                    }
+                }
+                }
+            }
+            },
+            xAxis: [
+            {
+                type: 'category',
+                axisLabel: { interval: 0 },
+                data: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+                splitLine: { show: false }
+            }
+            ],
+            yAxis: [
+            {
+                type: 'value',
+                name: 'Valor R$'
+            }
+            ],
+            series: [
+            { name: 'Alpinestars', type: 'bar' },
+            { name: 'ASW', type: 'bar' },
+            { name: 'Bell', type: 'bar' },
+            { name: 'Leatt', type: 'bar' },
+            {
+                name: 'Marcas',
+                type: 'pie',
+                center: ['88%', '25%'],
+                radius: '28%',
+                z: 100
+            }
+            ]
+        },
+        options: [
+            {
+            title: { text: '2021' },
+            series: [
+                { data: dataMap.dataMarcaAlpine['2021'] },
+                { data: dataMap.dataMarcaAsw['2021'] },
+                { data: dataMap.dataMarcaBell['2021'] },
+                { data: dataMap.dataMarcaLeatt['2021'] },
+                {
+                data: [
+                    { name: 'Alpinestars', value: dataMap.dataMarcaAlpine['2021sum'] },
+                    { name: 'ASW', value: dataMap.dataMarcaAsw['2021sum'] },
+                    { name: 'Bell', value: dataMap.dataMarcaBell['2021sum'] },
+                    { name: 'Leatt', value: dataMap.dataMarcaLeatt['2021sum'] },
+                ]
+                }
+            ]
+            },
+            {
+            title: { text: '2022' },
+            series: [
+                { data: dataMap.dataMarcaAlpine['2022'] },
+                { data: dataMap.dataMarcaAsw['2022'] },
+                { data: dataMap.dataMarcaBell['2022'] },
+                { data: dataMap.dataMarcaLeatt['2022'] },
+                {
+                data: [
+                    { name: 'Alpinestars', value: dataMap.dataMarcaAlpine['2022sum'] },
+                    { name: 'ASW', value: dataMap.dataMarcaAsw['2022sum'] },
+                    { name: 'Bell', value: dataMap.dataMarcaBell['2022sum'] },
+                    { name: 'Leatt', value: dataMap.dataMarcaLeatt['2022sum'] },
+                ]
+                }
+            ]
+            },
+        ]
+        };
+
+        option && myChart.setOption(option);
+    </script>
+
+    <script type="text/javascript">
+        var chartDom = document.getElementById('mainPie');
+        var myChart = echarts.init(chartDom, 'shine');
+        var option;
+
+        option = {
+        title: {
+            text: 'Tipo/Categoria',
+            left: true,
+            subtext: 'Quantidade vendida por Tipo/Categoria'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: '{a} <br/>{b}: {c} ({d}%)'
+        },
+        legend: {
+            data: [
+            'Acessórios',
+            'Capacete',
+            'Jaqueta',
+            'Bota',
+            
+            'OFF-ROAD',
+            'ON-ROAD',
+            'CICLISMO',
+            'CASUAL',
+            ]
+        },
+        series: [
+            {
+            name: 'Categoria',
+            type: 'pie',
+            selectedMode: 'single',
+            radius: [0, '30%'],
+            label: {
+                position: 'inner',
+                fontSize: 14
+            },
+            labelLine: {
+                show: false
+            },
+            data: [
+                { value: 1548, name: 'OFF-ROAD' },
+                { value: 775, name: 'ON-ROAD' },
+                { value: 679, name: 'CICLISMO', selected: false },
+                { value: 679, name: 'CASUAL', selected: false },
+            ]
+            },
+            {
+            name: 'Tipo',
+            type: 'pie',
+            radius: ['45%', '60%'],
+            labelLine: {
+                length: 30
+            },
+            label: {
+                formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
+                backgroundColor: '#F6F8FC',
+                borderColor: '#8C8D8E',
+                borderWidth: 1,
+                borderRadius: 4,
+                rich: {
+                a: {
+                    color: '#6E7079',
+                    lineHeight: 22,
+                    align: 'center'
+                },
+                hr: {
+                    borderColor: '#8C8D8E',
+                    width: '100%',
+                    borderWidth: 1,
+                    height: 0
+                },
+                b: {
+                    color: '#4C5058',
+                    fontSize: 14,
+                    fontWeight: 'bold',
+                    lineHeight: 33
+                },
+                per: {
+                    color: '#fff',
+                    backgroundColor: '#4C5058',
+                    padding: [3, 4],
+                    borderRadius: 4
+                }
+                }
+            },
+            data: [
+                { value: 335, name: 'Acessórios' },
+                { value: 310, name: 'Capacete' },
+                { value: 251, name: 'Bota' },
+                { value: 102, name: 'Jaqueta' }
+            ]
+            }
+        ]
+        };
+
+        option && myChart.setOption(option);
+
+    </script>
+
+    <!-- DataTables  & Plugins -->
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    
+    <!-- Page specific script -->
+    <script>
+        $(function () { 
+            $("#list_contacts").DataTable({
+                "paging": false,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": false,
+                "info": false,
+                "autoWidth": false,
+                "responsive": false,                
+                
+                "scrollY": '125px',
+                "scrollCollapse": true,
+            });
+            
+            $("#list_financialPending").DataTable({
+                "paging": false,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": false,
+                "info": false,
+                "autoWidth": false,
+                "responsive": false,                
+                
+                "scrollY": '125px',
+                "scrollCollapse": true,
+            });
+            
+            $("#list_warranty").DataTable({
+                "paging": false,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": false,
+                "info": false,
+                "autoWidth": false,
+                "responsive": false,                
+                
+                "scrollY": '125px',
+                "scrollCollapse": true,
+            });
+        });
+    </script>
+</body>
+
+</html>
